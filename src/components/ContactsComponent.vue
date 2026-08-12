@@ -33,8 +33,8 @@
 				          <a href="#"><img src="/images/github.svg"></a>
 				        </div>
 				        <div class="d-flex justify-content-end mt-2">
-				                                <div ref="recaptchaContainer"></div>
-				                            </div>
+                            <div ref="recaptchaContainer"></div>
+                        </div>
 				        <button type="submit" class="btn btn-submit btn-highlight" :disabled="isLoading">{{isLoading ? "Sending..." : "Submit"}}</button>
 				      </div>
 				    </form>
@@ -48,7 +48,7 @@
 
 <script setup>
 	
-	import { ref } from 'vue';
+	import { ref, onMounted, onBeforeUnmount } from 'vue';
 	import { Notyf } from 'notyf';
 	import 'notyf/notyf.min.css';
 
